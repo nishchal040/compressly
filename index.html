@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Compressor - Compress Images Online Free | Compressly</title>
+  <meta name="description" content="Compress JPG, PNG and WebP images online for free. Reduce image file size while maintaining quality. Fast, private and browser-based.">
+  
+  <!-- Canonical URL Placeholder -->
+  <link rel="canonical" href="https://compressly.example.com/">
+  
+  <!-- Favicon References (Standard System Icons) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'%3E%3Cpath d='M4 19h16v2H4zm10-5.59L15.59 12 12 8.41 8.41 12 10 13.59V17h4zm-2-12a8 8 0 00-8 8h2a6 6 0 1112 0h2a8 8 0 00-8-8z'/%3E%3C/svg%3E">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://compressly.example.com/">
+  <meta property="og:title" content="Image Compressor - Compress Images Online Free | Compressly">
+  <meta property="og:description" content="Compress JPG, PNG and WebP images online for free. Reduce image file size while maintaining quality. Fast, private and browser-based.">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='100%25' height='100%25' fill='%230f172a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236366f1' font-family='sans-serif' font-size='64' font-weight='bold'%3ECompressly%3C/text%3E%3C/svg%3E">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://compressly.example.com/">
+  <meta property="twitter:title" content="Image Compressor - Compress Images Online Free | Compressly">
+  <meta property="twitter:description" content="Compress JPG, PNG and WebP images online for free. Reduce image file size while maintaining quality. Fast, private and browser-based.">
+  
+  <meta name="theme-color" content="#6366f1">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- JSZip CDN for in-browser client-side ZIP packaging -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+  
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Compressly",
+    "operatingSystem": "All",
+    "applicationCategory": "MultimediaApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Compress JPG, PNG and WebP images online for free. Reduce image file size while maintaining quality. Fast, private and browser-based image compressor."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Compressly Home">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4 19h16v2H4zm10-5.59L15.59 12 12 8.41 8.41 12 10 13.59V17h4zm-2-12a8 8 0 00-8 8h2a6 6 0 1112 0h2a8 8 0 00-8-8z"/>
+        </svg>
+        <span>Compressly</span>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+        <a href="#compress-tool" class="btn btn-primary nav-btn">Compress Images</a>
+      </nav>
+
+      <div class="header-controls">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle visual theme">
+          <!-- Moon Icon (Light Mode Visible) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <!-- Sun Icon (Dark Mode Visible) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+        </button>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-container">
+        <h1 class="hero-title">Compress Images Online</h1>
+        <p class="hero-subtitle">Reduce image file sizes without sacrificing quality. Fast, free, and completely private.</p>
+        
+        <div class="trust-indicators">
+          <span class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            No uploads
+          </span>
+          <span class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            No registration
+          </span>
+          <span class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Free to use
+          </span>
+          <span class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Browser-based
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPRESSION TOOL MAIN SECTION -->
+    <section class="tool-section" id="compress-tool">
+      <div class="container">
+        
+        <!-- Dropzone Box -->
+        <div class="upload-zone" id="dropZone" tabindex="0" role="button" aria-label="Drop your images here or click to browse">
+          <input type="file" id="fileInput" multiple accept="image/jpeg, image/png, image/webp" class="file-input-hidden" aria-hidden="true">
+          <div class="upload-content">
+            <div class="upload-icon-wrapper">
+              <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+              </svg>
+            </div>
+            <p class="upload-main-text">Drop your images here</p>
+            <p class="upload-sub-text">or click to browse</p>
+            <p class="upload-formats">Supports JPG, PNG, WebP</p>
+            <button class="btn btn-secondary btn-upload-alt" type="button">Choose Images</button>
+          </div>
+        </div>
+
+        <div id="workspace" class="workspace hidden">
+          
+          <!-- Statistics Bar -->
+          <div class="stats-bar hidden" id="statsBar">
+            <div class="stat-card">
+              <span class="stat-label">Processed</span>
+              <span class="stat-value" id="statProcessed">0 Images</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Original Size</span>
+              <span class="stat-value" id="statOriginal">0 B</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">New Size</span>
+              <span class="stat-value" id="statCompressed">0 B</span>
+            </div>
+            <div class="stat-card highlight">
+              <span class="stat-label">Total Saved</span>
+              <span class="stat-value" id="statSaved">0%</span>
+            </div>
+          </div>
+
+          <div class="workspace-grid">
+            <!-- Settings Panel -->
+            <aside class="settings-panel">
+              <h2 class="section-subtitle">Compression Settings</h2>
+              
+              <div class="setting-group">
+                <div class="setting-header">
+                  <label for="qualitySlider" class="setting-label">Quality: <span id="qualityVal">80</span>%</label>
+                </div>
+                <input type="range" id="qualitySlider" min="10" max="100" value="80" class="slider">
+                <p class="setting-tip">Lower quality produces smaller files.</p>
+              </div>
+
+              <div class="setting-group">
+                <label for="formatSelect" class="setting-label">Output Format</label>
+                <div class="select-wrapper">
+                  <select id="formatSelect" class="select-input">
+                    <option value="auto">Auto (Same as Original)</option>
+                    <option value="jpeg">JPEG</option>
+                    <option value="png">PNG</option>
+                    <option value="webp" selected>WebP</option>
+                  </select>
+                </div>
+                <p class="setting-tip info-tip hidden" id="pngWarning">
+                  Note: Standard PNG is a lossless format. While transparency is preserved, canvas-based compression limits the impact of quality variables on raw PNGs. Convert to WebP or JPEG for major size reductions.
+                </p>
+              </div>
+
+              <div class="setting-group checkbox-group">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="resizeCheckbox">
+                  <span class="custom-checkbox"></span>
+                  Resize Images
+                </label>
+              </div>
+
+              <div class="resize-dimensions hidden" id="resizeDimensions">
+                <div class="dimension-inputs">
+                  <div class="dimension-field">
+                    <label for="maxWidth">Max Width (px)</label>
+                    <input type="number" id="maxWidth" placeholder="e.g. 1920" min="1">
+                  </div>
+                  <div class="dimension-field">
+                    <label for="maxHeight">Max Height (px)</label>
+                    <input type="number" id="maxHeight" placeholder="e.g. 1080" min="1">
+                  </div>
+                </div>
+                <p class="setting-tip">Aspect ratio is preserved. Images are never upscaled.</p>
+              </div>
+
+              <div class="action-buttons-group">
+                <button id="compressBtn" class="btn btn-primary btn-block">
+                  <span id="compressBtnText">Compress Images</span>
+                </button>
+                <div class="sub-actions">
+                  <button id="downloadAllBtn" class="btn btn-success btn-block hidden">Download All (ZIP)</button>
+                  <button id="clearAllBtn" class="btn btn-outline btn-block">Clear All</button>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Image Queue & List -->
+            <div class="queue-container">
+              <div class="queue-header">
+                <h2 class="section-subtitle">Image Queue (<span id="queueCount">0</span>)</h2>
+              </div>
+              <div class="image-list" id="imageList">
+                <!-- Image items populated by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- BEFORE / AFTER PREVIEW DRAWER -->
+          <div class="comparison-section hidden" id="comparisonSection">
+            <h3 class="comparison-title">Interactive Comparison</h3>
+            <p class="comparison-subtitle">Select an image card above to compare original versus compressed versions.</p>
+            <div class="comparison-grid">
+              <div class="comparison-card">
+                <div class="comparison-header">Original (<span id="compOrigSize">0 KB</span>)</div>
+                <div class="comparison-view-wrapper">
+                  <img id="compOrigImg" src="" alt="Original View">
+                </div>
+                <div class="comparison-footer" id="compOrigDim">0 x 0 px</div>
+              </div>
+              <div class="comparison-card">
+                <div class="comparison-header highlighted">Compressed (<span id="compNewSize">0 KB</span>)</div>
+                <div class="comparison-view-wrapper">
+                  <img id="compNewImg" src="" alt="Compressed View">
+                </div>
+                <div class="comparison-footer" id="compNewDim">0 x 0 px - Saved <span id="compSavings">0%</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRIVACY ASSURANCE SECTION -->
+    <section class="privacy-section">
+      <div class="container privacy-container">
+        <div class="privacy-icon-card">
+          <svg class="privacy-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <div class="privacy-text-content">
+          <h2 class="privacy-title">Your Images Stay Private</h2>
+          <p class="privacy-text">Compressly utilizes direct browser execution models. All tasks happen locally on your computer inside your web sandbox via Javascript. No files are transferred, saved, or uploaded to external web servers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title text-center">How It Works</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h3 class="step-heading">Upload</h3>
+            <p class="step-desc">Choose or drag one or multiple images into the local processing zone.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h3 class="step-heading">Compress</h3>
+            <p class="step-desc">Adjust the quality profile slider or convert format profiles based on preferences.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h3 class="step-heading">Download</h3>
+            <p class="step-desc">Retrieve your lightweight files individually or in a packaged bulk archive instantly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title text-center">Engineered for Performance</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9l-7-7zm1 7V3.5L18.5 9H14z"/></svg>
+            </div>
+            <h3 class="feature-title">Fast Compression</h3>
+            <p class="feature-desc">Processes items on hardware directly using browser-native APIs.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+            </div>
+            <h3 class="feature-title">Private by Design</h3>
+            <p class="feature-desc">Zero files leave your device. Absolute confidentiality assured.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+            </div>
+            <h3 class="feature-title">Multiple Images</h3>
+            <p class="feature-desc">Process multiple formats at the exact same moment with batch features.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+            </div>
+            <h3 class="feature-title">Quality Control</h3>
+            <p class="feature-desc">Fine-tune files by testing scale parameters before downloading.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.5-5L11 15.51 8.5 12.5 5 17h14l-4.5-3z"/></svg>
+            </div>
+            <h3 class="feature-title">Multiple Formats</h3>
+            <p class="feature-desc">Fully supports files of format categories JPEG, WebP, and PNG.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            <h3 class="feature-title">Free to Use</h3>
+            <p class="feature-desc">No membership cards, logins, accounts or usage caps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IN-DEPTH SEO KNOWLEDGE SECTION -->
+    <section class="seo-content-section">
+      <div class="container">
+        <h2>Free Online Image Compressor</h2>
+        
+        <div class="seo-grid">
+          <div class="seo-column">
+            <h3>What is Image Compression?</h3>
+            <p>Image compression refers to reducing an image's overall data storage size while retaining as much visual aesthetic as possible. Compression works by restructuring mathematical raster parameters or removing structural metadata, making assets quicker to display over active web frameworks.</p>
+            
+            <h3>Why Image Compression Matters</h3>
+            <p>Images often comprise over 60% of modern web page sizes. Uncompressed large visuals directly result in higher web abandonment risks, lowered SEO scores, and heavy resource usage on mobile connections. Compression offers optimized operational throughput globally.</p>
+
+            <h3>Lossy vs Lossless Compression</h3>
+            <p>Lossy methods discard non-noticeable visual parameters to optimize sizes, working exceptionally for standard WebP and JPG targets. Lossless compression systems preserve internal image metrics completely, which maintains exact visual parity but yields slightly larger files.</p>
+          </div>
+
+          <div class="seo-column">
+            <h3>JPG, PNG and WebP Capabilities</h3>
+            <ul>
+              <li><strong>JPG Compression:</strong> Standard lossy format, responds effectively to small changes in operational sliders.</li>
+              <li><strong>PNG Compression:</strong> Designed for flat shapes and transparency. Native browsers use canvas configurations to keep operations completely within safe borders.</li>
+              <li><strong>WebP Optimization:</strong> Superior next-gen algorithm developed by Google, delivering small footprints and rich dynamic ranges.</li>
+            </ul>
+
+            <h3>Improve Website Performance</h3>
+            <p>Applying image tools directly elevates key Lighthouse criteria, including Largest Contentful Paint (LCP) and Speed Index metrics. By optimizing assets, companies can ensure responsive performance profiles across mobile configurations and global network structures.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION (ACCORDION) -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2 class="section-title text-center">Frequently Asked Questions</h2>
+        
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>1. What is an image compressor?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>An image compressor is a utility program that utilizes algorithmic formulas to process visual dimensions or structural properties, lowering overall file sizes for swift loading capabilities online.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>2. How do I compress an image?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Drag files into our designated interface dropzone, select the target format and quality slider settings, and click "Compress Images". Your processed files will be ready to download in seconds.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>3. Is this image compressor free?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Compressly operates as an entirely free utility with zero subscription costs, platform memberships, or usage restrictions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>4. Does this website upload my images?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>No. Operations run entirely within your local browser runtime. File information is processed using offline-capable system hooks rather than external servers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>5. Can I compress JPG images?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, JPG is fully supported. Adjusting the quality slider directly alters the internal matrix structures of JPG targets to maximize storage efficiency.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>6. Can I compress PNG images?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. PNG files are processed losslessly to protect transparent pixels. For substantial size savings, we recommend converting your input PNG files to WebP or JPG.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>7. Can I compress WebP images?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. WebP supports robust compression levels, offering rich graphics profiles at significantly smaller file sizes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>8. Can I compress multiple images?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we support concurrent batch operations. Drag several items together and compile them instantly into a ZIP package.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>9. Does image compression reduce quality?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Our tool reduces non-visible digital artifacts first. Setting values to 75-85% typically reduces file sizes significantly with minimal impact on visible quality.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>10. Can I resize images while compressing them?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Toggle the "Resize Images" option to apply maximum width and height bounds while maintaining the original aspect ratio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE FREE IMAGE TOOLS SECTION (SEO ROUTING STUBS) -->
+    <section class="related-tools">
+      <div class="container">
+        <h2 class="section-title text-center">More Free Image Tools</h2>
+        <div class="tools-grid">
+          <a href="/image-resizer.html" class="tool-card disabled-link">
+            <h4>Image Resizer</h4>
+            <p>Adjust proportional aspect formats quickly.</p>
+          </a>
+          <a href="/image-converter.html" class="tool-card disabled-link">
+            <h4>Image Converter</h4>
+            <p>Change image formats across raw types.</p>
+          </a>
+          <a href="/jpg-to-webp.html" class="tool-card disabled-link">
+            <h4>JPG to WebP</h4>
+            <p>Convert JPG files to highly optimized WebP format.</p>
+          </a>
+          <a href="/png-to-webp.html" class="tool-card disabled-link">
+            <h4>PNG to WebP</h4>
+            <p>Convert transparent PNGs to lossless WebP formats.</p>
+          </a>
+          <a href="/webp-to-jpg.html" class="tool-card disabled-link">
+            <h4>WebP to JPG</h4>
+            <p>Convert WebP assets to widely compatible JPEGs.</p>
+          </a>
+          <a href="/image-cropper.html" class="tool-card disabled-link">
+            <h4>Image Cropper</h4>
+            <p>Crop edges to adjust spatial aspect rules.</p>
+          </a>
+          <a href="/image-to-pdf.html" class="tool-card disabled-link">
+            <h4>Image to PDF</h4>
+            <p>Convert visual sequences into document files.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <div class="logo">
+          <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 19h16v2H4zm10-5.59L15.59 12 12 8.41 8.41 12 10 13.59V17h4zm-2-12a8 8 0 00-8 8h2a6 6 0 1112 0h2a8 8 0 00-8-8z"/>
+          </svg>
+          <span>Compressly</span>
+        </div>
+        <p class="footer-text">Fast, private image compression directly in your browser.</p>
+      </div>
+      
+      <div class="footer-links">
+        <ul class="footer-list">
+          <li><strong>Navigation</strong></li>
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
+          <li><a href="#faq" class="footer-link">FAQ</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><strong>Legal</strong></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Compressly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
