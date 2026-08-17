@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /image-resizer.html
+Disallow: /image-converter.html
+Disallow: /jpg-to-webp.html
+Disallow: /png-to-webp.html
+Disallow: /webp-to-jpg.html
+Disallow: /image-cropper.html
+Disallow: /image-to-pdf.html
+
+Sitemap: https://compressly.vercel.app/sitemap.xml
