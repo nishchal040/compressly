@@ -10,13 +10,13 @@
   <link rel="canonical" href="https://compressly.vercel.app/">
   
   <!-- Favicon References -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   
   <!-- PWA Manifest -->
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="manifest" href="site.webmanifest">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -90,6 +90,20 @@
 
       <nav class="nav" id="navMenu">
         <ul class="nav-list">
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="toolsDropdownToggle" aria-haspopup="true" aria-expanded="false">Image Tools <span class="chevron"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="toolsDropdownToggle">
+              <li><a href="index.html">Image Compressor</a></li>
+              <li><a href="image-resizer.html">Image Resizer</a></li>
+              <li><a href="image-cropper.html">Image Cropper</a></li>
+              <li><a href="image-converter.html">Image Converter</a></li>
+              <li><a href="image-to-pdf.html">Image to PDF</a></li>
+              <li><a href="image-rotator.html">Image Rotator</a></li>
+              <li><a href="image-flipper.html">Image Flipper</a></li>
+              <li><a href="image-metadata-viewer.html">Metadata Viewer</a></li>
+              <li><a href="base64-image-converter.html">Base64 Converter</a></li>
+            </ul>
+          </li>
           <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
           <li><a href="#features" class="nav-link">Features</a></li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
@@ -531,33 +545,49 @@
       <div class="container">
         <h2 class="section-title text-center">More Free Image Tools</h2>
         <div class="tools-grid">
-          <a href="/image-resizer.html" class="tool-card disabled-link" rel="nofollow">
+          <a href="image-resizer.html" class="tool-card">
             <h4>Image Resizer</h4>
             <p>Adjust proportional aspect formats quickly.</p>
           </a>
-          <a href="/image-converter.html" class="tool-card disabled-link" rel="nofollow">
+          <a href="image-converter.html" class="tool-card">
             <h4>Image Converter</h4>
             <p>Change image formats across raw types.</p>
           </a>
-          <a href="/jpg-to-webp.html" class="tool-card disabled-link" rel="nofollow">
+          <a href="jpg-to-webp.html" class="tool-card">
             <h4>JPG to WebP</h4>
             <p>Convert JPG files to highly optimized WebP format.</p>
           </a>
-          <a href="/png-to-webp.html" class="tool-card disabled-link" rel="nofollow">
+          <a href="png-to-webp.html" class="tool-card">
             <h4>PNG to WebP</h4>
             <p>Convert transparent PNGs to lossless WebP formats.</p>
           </a>
-          <a href="/webp-to-jpg.html" class="tool-card disabled-link" rel="nofollow">
+          <a href="webp-to-jpg.html" class="tool-card">
             <h4>WebP to JPG</h4>
             <p>Convert WebP assets to widely compatible JPEGs.</p>
           </a>
-          <a href="/image-cropper.html" class="tool-card disabled-link" rel="nofollow">
+          <a href="image-cropper.html" class="tool-card">
             <h4>Image Cropper</h4>
             <p>Crop edges to adjust spatial aspect rules.</p>
           </a>
-          <a href="/image-to-pdf.html" class="tool-card disabled-link" rel="nofollow">
+          <a href="image-to-pdf.html" class="tool-card">
             <h4>Image to PDF</h4>
             <p>Convert visual sequences into document files.</p>
+          </a>
+          <a href="image-rotator.html" class="tool-card">
+            <h4>Image Rotator</h4>
+            <p>Rotate image orientations in degrees.</p>
+          </a>
+          <a href="image-flipper.html" class="tool-card">
+            <h4>Image Flipper</h4>
+            <p>Flip images horizontally or vertically.</p>
+          </a>
+          <a href="image-metadata-viewer.html" class="tool-card">
+            <h4>Metadata Viewer</h4>
+            <p>View or strip EXIF details from images.</p>
+          </a>
+          <a href="base64-image-converter.html" class="tool-card">
+            <h4>Base64 Converter</h4>
+            <p>Encode images or decode Base64 data back.</p>
           </a>
         </div>
       </div>
@@ -580,9 +610,27 @@
       <div class="footer-links">
         <ul class="footer-list">
           <li><strong>Navigation</strong></li>
-          <li><a href="#" class="footer-link">Home</a></li>
-          <li><a href="#how-it-works" class="footer-link">How It Works</a></li>
-          <li><a href="#faq" class="footer-link">FAQ</a></li>
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="index.html#how-it-works" class="footer-link">How It Works</a></li>
+          <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><strong>Image Tools</strong></li>
+          <li><a href="index.html" class="footer-link">Compressor</a></li>
+          <li><a href="image-resizer.html" class="footer-link">Resizer</a></li>
+          <li><a href="image-cropper.html" class="footer-link">Cropper</a></li>
+          <li><a href="image-to-pdf.html" class="footer-link">Image to PDF</a></li>
+          <li><a href="image-rotator.html" class="footer-link">Image Rotator</a></li>
+          <li><a href="image-flipper.html" class="footer-link">Image Flipper</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><strong>Converters</strong></li>
+          <li><a href="image-converter.html" class="footer-link">Converter</a></li>
+          <li><a href="jpg-to-webp.html" class="footer-link">JPG to WebP</a></li>
+          <li><a href="png-to-webp.html" class="footer-link">PNG to WebP</a></li>
+          <li><a href="webp-to-jpg.html" class="footer-link">WebP to JPG</a></li>
+          <li><a href="image-metadata-viewer.html" class="footer-link">Metadata Viewer</a></li>
+          <li><a href="base64-image-converter.html" class="footer-link">Base64 Converter</a></li>
         </ul>
         <ul class="footer-list">
           <li><strong>Legal</strong></li>

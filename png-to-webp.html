@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert PNG to WebP Online Free | Compressly</title>
+  <meta name="description" content="Convert transparent PNG images to next-gen WebP format online for free. Retain transparency details while decreasing sizes. Fast, private, browser-based.">
+  
+  <link rel="canonical" href="https://compressly.vercel.app/png-to-webp.html">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+</head>
+<body data-from="png" data-to="webp">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Compressly Home">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4 19h16v2H4zm10-5.59L15.59 12 12 8.41 8.41 12 10 13.59V17h4zm-2-12a8 8 0 00-8 8h2a6 6 0 1112 0h2a8 8 0 00-8-8z"/>
+        </svg>
+        <span>Compressly</span>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <ul class="nav-list">
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="toolsDropdownToggle" aria-haspopup="true" aria-expanded="false">Image Tools <span class="chevron"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="toolsDropdownToggle">
+              <li><a href="index.html">Image Compressor</a></li>
+              <li><a href="image-resizer.html">Image Resizer</a></li>
+              <li><a href="image-cropper.html">Image Cropper</a></li>
+              <li><a href="image-converter.html">Image Converter</a></li>
+              <li><a href="image-to-pdf.html">Image to PDF</a></li>
+              <li><a href="image-rotator.html">Image Rotator</a></li>
+              <li><a href="image-flipper.html">Image Flipper</a></li>
+              <li><a href="image-metadata-viewer.html">Metadata Viewer</a></li>
+              <li><a href="base64-image-converter.html">Base64 Converter</a></li>
+            </ul>
+          </li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+        <a href="#convert-tool" class="btn btn-primary nav-btn">Convert Images</a>
+      </nav>
+
+      <div class="header-controls">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle visual theme">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+        </button>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-container">
+        <h1 class="hero-title" id="toolTitle">Convert PNG to WebP</h1>
+        <p class="hero-subtitle" id="toolSubtitle">Convert PNG images to transparent WebP format instantly. Processes entirely offline in your browser.</p>
+        
+        <div class="trust-indicators">
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>No uploads</span>
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Fast conversion</span>
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Batch support</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN TOOL SECTION -->
+    <section class="tool-section" id="convert-tool">
+      <div class="container">
+        
+        <div class="upload-zone" id="dropZone" tabindex="0" role="button" aria-label="Drop your images here or click to browse">
+          <input type="file" id="fileInput" multiple accept="image/*" class="file-input-hidden" aria-hidden="true">
+          <div class="upload-content">
+            <div class="upload-icon-wrapper">
+              <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+              </svg>
+            </div>
+            <p class="upload-main-text" id="uploadMainText">Drop your images here</p>
+            <p class="upload-sub-text">or click to browse</p>
+            <p class="upload-formats" id="uploadFormatsText">Supports PNG</p>
+            <button class="btn btn-secondary btn-upload-alt" type="button">Choose Images</button>
+          </div>
+        </div>
+
+        <div id="workspace" class="workspace hidden">
+          <!-- Stats Bar -->
+          <div class="stats-bar hidden" id="statsBar">
+            <div class="stat-card">
+              <span class="stat-label">Processed</span>
+              <span class="stat-value" id="statProcessed">0 Images</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Original Size</span>
+              <span class="stat-value" id="statOriginal">0 B</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">New Size</span>
+              <span class="stat-value" id="statCompressed">0 B</span>
+            </div>
+            <div class="stat-card highlight">
+              <span class="stat-label">Total Saved</span>
+              <span class="stat-value" id="statSaved">0%</span>
+            </div>
+          </div>
+
+          <div class="workspace-grid">
+            <!-- Settings Panel -->
+            <aside class="settings-panel">
+              <h2 class="section-subtitle">Convert Settings</h2>
+              
+              <div class="setting-group" id="formatSelectGroup" style="display:none;">
+                <label for="formatSelect" class="setting-label">Target Format</label>
+                <div class="select-wrapper">
+                  <select id="formatSelect" class="select-input">
+                    <option value="webp" selected>WebP</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="setting-group" id="qualitySelectGroup">
+                <div class="setting-header">
+                  <label for="qualitySlider" class="setting-label">Quality: <span id="qualityVal">95</span>%</label>
+                </div>
+                <input type="range" id="qualitySlider" min="10" max="100" value="95" class="slider">
+                <p class="setting-tip">Adjust output quality. Since WebP supports lossy alpha, adjusting this will optimize size.</p>
+              </div>
+
+              <div class="action-buttons-group">
+                <button id="convertBtn" class="btn btn-primary btn-block">
+                  <span id="convertBtnText">Convert Images</span>
+                </button>
+                <div class="sub-actions">
+                  <button id="downloadAllBtn" class="btn btn-success btn-block hidden">Download All (ZIP)</button>
+                  <button id="clearAllBtn" class="btn btn-outline btn-block">Clear All</button>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Image Queue -->
+            <div class="queue-container">
+              <div class="queue-header">
+                <h2 class="section-subtitle">Image Queue (<span id="queueCount">0</span>)</h2>
+              </div>
+              <div class="image-list" id="imageList"></div>
+            </div>
+          </div>
+
+          <!-- BEFORE / AFTER COMPARISON -->
+          <div class="comparison-section hidden" id="comparisonSection">
+            <h3 class="comparison-title">Interactive Comparison</h3>
+            <p class="comparison-subtitle">Select an image card above to compare original versus converted versions.</p>
+            <div class="comparison-grid">
+              <div class="comparison-card">
+                <div class="comparison-header">Original (<span id="compOrigSize">0 KB</span>)</div>
+                <div class="comparison-view-wrapper"><img id="compOrigImg" src="" alt="Original View"></div>
+                <div class="comparison-footer" id="compOrigDim">0 x 0 px</div>
+              </div>
+              <div class="comparison-card">
+                <div class="comparison-header highlighted">Converted (<span id="compNewSize">0 KB</span>)</div>
+                <div class="comparison-view-wrapper"><img id="compNewImg" src="" alt="Converted View"></div>
+                <div class="comparison-footer" id="compNewDim">0 x 0 px</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY ASSURANCE -->
+    <section class="privacy-section">
+      <div class="container privacy-container">
+        <div class="privacy-icon-card">
+          <svg class="privacy-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <div class="privacy-text-content">
+          <h2 class="privacy-title">Direct Sandbox In-Browser Conversions</h2>
+          <p class="privacy-text">We process image translations purely via HTML5 client hooks locally. Your sensitive file streams never traverse external cloud setups, safeguarding details absolutely.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <div class="logo">
+          <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 19h16v2H4zm10-5.59L15.59 12 12 8.41 8.41 12 10 13.59V17h4zm-2-12a8 8 0 00-8 8h2a6 6 0 1112 0h2a8 8 0 00-8-8z"/>
+          </svg>
+          <span>Compressly</span>
+        </div>
+        <p class="footer-text">Fast, private image operations directly in your browser.</p>
+      </div>
+      
+      <div class="footer-links">
+        <ul class="footer-list">
+          <li><strong>Navigation</strong></li>
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="index.html#how-it-works" class="footer-link">How It Works</a></li>
+          <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><strong>Image Tools</strong></li>
+          <li><a href="index.html" class="footer-link">Compressor</a></li>
+          <li><a href="image-resizer.html" class="footer-link">Resizer</a></li>
+          <li><a href="image-cropper.html" class="footer-link">Cropper</a></li>
+          <li><a href="image-to-pdf.html" class="footer-link">Image to PDF</a></li>
+          <li><a href="image-rotator.html" class="footer-link">Image Rotator</a></li>
+          <li><a href="image-flipper.html" class="footer-link">Image Flipper</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><strong>Converters</strong></li>
+          <li><a href="image-converter.html" class="footer-link">Converter</a></li>
+          <li><a href="jpg-to-webp.html" class="footer-link">JPG to WebP</a></li>
+          <li><a href="png-to-webp.html" class="footer-link">PNG to WebP</a></li>
+          <li><a href="webp-to-jpg.html" class="footer-link">WebP to JPG</a></li>
+          <li><a href="image-metadata-viewer.html" class="footer-link">Metadata Viewer</a></li>
+          <li><a href="base64-image-converter.html" class="footer-link">Base64 Converter</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><strong>Legal</strong></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Compressly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="converter.js"></script>
+</body>
+</html>

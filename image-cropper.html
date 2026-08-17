@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Cropper - Crop Images Online Free | Compressly</title>
+  <meta name="description" content="Crop JPG, PNG and WebP images online for free. Adjust crop dimensions, rotate, flip, and download instantly. Fast, private and browser-based image cropper.">
+  
+  <link rel="canonical" href="https://compressly.vercel.app/image-cropper.html">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  
+  <!-- Cropper.js CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Cropper.js JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Compressly Home">
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4 19h16v2H4zm10-5.59L15.59 12 12 8.41 8.41 12 10 13.59V17h4zm-2-12a8 8 0 00-8 8h2a6 6 0 1112 0h2a8 8 0 00-8-8z"/>
+        </svg>
+        <span>Compressly</span>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <ul class="nav-list">
+          <li class="dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="toolsDropdownToggle" aria-haspopup="true" aria-expanded="false">Image Tools <span class="chevron"></span></a>
+            <ul class="dropdown-menu" aria-labelledby="toolsDropdownToggle">
+              <li><a href="index.html">Image Compressor</a></li>
+              <li><a href="image-resizer.html">Image Resizer</a></li>
+              <li><a href="image-cropper.html">Image Cropper</a></li>
+              <li><a href="image-converter.html">Image Converter</a></li>
+              <li><a href="image-to-pdf.html">Image to PDF</a></li>
+              <li><a href="image-rotator.html">Image Rotator</a></li>
+              <li><a href="image-flipper.html">Image Flipper</a></li>
+              <li><a href="image-metadata-viewer.html">Metadata Viewer</a></li>
+              <li><a href="base64-image-converter.html">Base64 Converter</a></li>
+            </ul>
+          </li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+        <a href="#cropper-tool" class="btn btn-primary nav-btn">Crop Images</a>
+      </nav>
+
+      <div class="header-controls">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle visual theme">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+        </button>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-container">
+        <h1 class="hero-title">Visual Image Cropper</h1>
+        <p class="hero-subtitle">Trim and crop your images with precise aspect ratio locks, horizontal/vertical flipping, and custom rotations locally in-browser.</p>
+        
+        <div class="trust-indicators">
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>No uploads</span>
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Visual Adjustments</span>
+          <span class="trust-item"><svg class="trust-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Pre-set ratios</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN TOOL SECTION -->
+    <section class="tool-section" id="cropper-tool">
+      <div class="container">
+        
+        <div class="upload-zone" id="dropZone" tabindex="0" role="button" aria-label="Drop an image here or click to browse">
+          <input type="file" id="fileInput" accept="image/jpeg, image/png, image/webp" class="file-input-hidden" aria-hidden="true">
+          <div class="upload-content">
+            <div class="upload-icon-wrapper">
+              <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+              </svg>
+            </div>
+            <p class="upload-main-text">Drop your image here</p>
+            <p class="upload-sub-text">or click to browse</p>
+            <p class="upload-formats">Supports JPG, PNG, WebP</p>
+            <button class="btn btn-secondary btn-upload-alt" type="button">Choose Image</button>
+          </div>
+        </div>
+
+        <div id="workspace" class="workspace hidden">
+          <div class="workspace-grid" style="grid-template-columns: 1fr 350px;">
+            <!-- Interactive Cropping Area -->
+            <div class="cropper-wrapper">
+              <div class="cropper-container-box">
+                <img id="sourceImage" src="" alt="Cropping Source">
+              </div>
+            </div>
+
+            <!-- Settings Panel -->
+            <aside class="settings-panel">
+              <h2 class="section-subtitle">Cropper Options</h2>
+              
+              <div class="setting-group">
+                <label class="setting-label">Aspect Ratio</label>
+                <div class="crop-preset-grid" style="margin-top: 8px;">
+                  <button id="ratioFree" class="btn btn-secondary btn-sm crop-btn-active" data-ratio="NaN">Free</button>
+                  <button id="ratio1x1" class="btn btn-secondary btn-sm" data-ratio="1">1:1</button>
+                  <button id="ratio16x9" class="btn btn-secondary btn-sm" data-ratio="1.777">16:9</button>
+                  <button id="ratio4x3" class="btn btn-secondary btn-sm" data-ratio="1.333">4:3</button>
+                </div>
+              </div>
+
+              <div class="setting-group">
+                <label class="setting-label">Transform Tools</label>
+                <div class="edit-actions-row" style="margin-top: 8px;">
+                  <button id="rotateLeft" class="btn btn-secondary btn-sm" title="Rotate Left 90°" style="flex: 1;">↺ Left</button>
+                  <button id="rotateRight" class="btn btn-secondary btn-sm" title="Rotate Right 90°" style="flex: 1;">↻ Right</button>
+                </div>
+                <div class="edit-actions-row">
+                  <button id="flipH" class="btn btn-secondary btn-sm" title="Flip Horizontal" style="flex: 1;">↔ Flip H</button>
+                  <button id="flipV" class="btn btn-secondary btn-sm" title="Flip Vertical" style="flex: 1;">↕ Flip V</button>
+                </div>
+              </div>
+
+              <div class="setting-group">
+                <label for="formatSelect" class="setting-label">Output Format</label>
+                <div class="select-wrapper">
+                  <select id="formatSelect" class="select-input">
+                    <option value="jpeg">JPEG</option>
+                    <option value="png">PNG</option>
+                    <option value="webp" selected>WebP</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="action-buttons-group">
+                <button id="cropBtn" class="btn btn-primary btn-block">Crop & Save</button>
+                <button id="clearAllBtn" class="btn btn-outline btn-block">Clear</button>
+              </div>
+            </aside>
+          </div>
+
+          <!-- CROPPED RESULT PREVIEW -->
+          <div class="comparison-section hidden" id="resultSection" style="margin-top: 30px;">
+            <h3 class="comparison-title">Cropped Result</h3>
+            <p class="comparison-subtitle">Preview your cropped image parameters below.</p>
+            <div class="comparison-card" style="max-width: 600px; margin: 0 auto;">
+              <div class="comparison-header highlighted">Cropped Image Output</div>
+              <div class="comparison-view-wrapper">
+                <img id="resultImage" src="" alt="Cropped Preview">
+              </div>
+              <div class="comparison-footer" id="resultSpecs">0 x 0 px - 0 B</div>
+              <div style="padding: 15px; background: var(--bg-secondary); border-top: 1px solid var(--border-color); text-align: center;">
+                <button id="downloadResultBtn" class="btn btn-success">Download Cropped Image</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY ASSURANCE -->
+    <section class="privacy-section">
+      <div class="container privacy-container">
+        <div class="privacy-icon-card">
+          <svg class="privacy-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <div class="privacy-text-content">
+          <h2 class="privacy-title">Secure & Confidential Cropping</h2>
+          <p class="privacy-text">No image is uploaded to server hardware. Your files are processed strictly inside your device's memory utilizing local Canvas boundaries. Safe, offline-ready operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2 class="section-title text-center">Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>1. How do I change the crop ratio lock?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Under the options panel, select any of the Aspect Ratio preset buttons. Selecting 'Free' will allow you to drag corners of the crop box to any custom proportions.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>2. Does rotating or flipping alter the file resolution?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+              <p>No. Canvas redraw routines render the transforms cleanly, maintaining original structural image pixel counts while adjusting coordinates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <div class="logo">
+          <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 19h16v2H4zm10-5.59L15.59 12 12 8.41 8.41 12 10 13.59V17h4zm-2-12a8 8 0 00-8 8h2a6 6 0 1112 0h2a8 8 0 00-8-8z"/>
+          </svg>
+          <span>Compressly</span>
+        </div>
+        <p class="footer-text">Fast, private image operations directly in your browser.</p>
+      </div>
+      
+      <div class="footer-links">
+        <ul class="footer-list">
+          <li><strong>Navigation</strong></li>
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="index.html#how-it-works" class="footer-link">How It Works</a></li>
+          <li><a href="index.html#faq" class="footer-link">FAQ</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><strong>Image Tools</strong></li>
+          <li><a href="index.html" class="footer-link">Compressor</a></li>
+          <li><a href="image-resizer.html" class="footer-link">Resizer</a></li>
+          <li><a href="image-cropper.html" class="footer-link">Cropper</a></li>
+          <li><a href="image-to-pdf.html" class="footer-link">Image to PDF</a></li>
+          <li><a href="image-rotator.html" class="footer-link">Image Rotator</a></li>
+          <li><a href="image-flipper.html" class="footer-link">Image Flipper</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><strong>Converters</strong></li>
+          <li><a href="image-converter.html" class="footer-link">Converter</a></li>
+          <li><a href="jpg-to-webp.html" class="footer-link">JPG to WebP</a></li>
+          <li><a href="png-to-webp.html" class="footer-link">PNG to WebP</a></li>
+          <li><a href="webp-to-jpg.html" class="footer-link">WebP to JPG</a></li>
+          <li><a href="image-metadata-viewer.html" class="footer-link">Metadata Viewer</a></li>
+          <li><a href="base64-image-converter.html" class="footer-link">Base64 Converter</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><strong>Legal</strong></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Compressly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="cropper.js"></script>
+</body>
+</html>
